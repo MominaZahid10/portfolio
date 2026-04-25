@@ -1,124 +1,61 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaJs, FaReact, FaNodeJs, FaPython, FaDatabase,FaJava } from "react-icons/fa";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
-import { CgFigma } from "react-icons/cg";
+import { FaPython, FaReact, FaDocker, FaGitAlt } from "react-icons/fa";
+import { BiLogoPostgresql, BiLogoFlask } from "react-icons/bi";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiTensorflow, SiTypescript, SiScikitlearn, SiCplusplus, SiPandas } from "react-icons/si";
 
 export default function Skills() {
   const [skills] = useState([
-    { id: 1, name: "JavaScript", icon: <FaJs size={50} /> },
-    { id: 2, name: "React", icon: <FaReact size={50} /> },
-    { id: 3, name: "Node.js", icon: <FaNodeJs size={50} /> },
-    { id: 4, name: "Python", icon: <FaPython size={50} /> },
-    { id: 5, name: "MongoDB", icon: <FaDatabase size={50} /> },
-    { id: 6, name: "Java", icon: <FaJava size={50} /> },
-    { id: 7, name: "Postgresql", icon: <BiLogoPostgresql size={50} /> },
-    { id: 8, name: "Next.js", icon: <RiNextjsFill size={50} /> },
-    { id: 9, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
-    { id: 10, name: "Figma", icon: <CgFigma size={50} /> },
-  ]);
-
-  const [experiences] = useState([
-    {
-      id: 1,
-      company: "Google",
-      role: "Lead Software Engineer",
-      period: "Nov 2019 - Present",
-      description:
-        "Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience.",
-      logo: "/assets/google.svg",
-    },
-    {
-      id: 2,
-      company: "Youtube",
-      role: "Software Engineer",
-      period: "Jan 2017 - Oct 2019",
-      description:
-        "At Youtube, I served as a  Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
-      logo: "/assets/youtube.svg",
-    },
+    { id: 1, name: "Python", icon: <FaPython size={36} /> },
+    { id: 2, name: "TensorFlow", icon: <SiTensorflow size={36} /> },
+    { id: 3, name: "Scikit-learn", icon: <SiScikitlearn size={36} /> },
+    { id: 4, name: "React", icon: <FaReact size={36} /> },
+    { id: 5, name: "Next.js", icon: <RiNextjsFill size={36} /> },
+    { id: 6, name: "TypeScript", icon: <SiTypescript size={36} /> },
+    { id: 7, name: "C++", icon: <SiCplusplus size={36} /> },
+    { id: 8, name: "Docker", icon: <FaDocker size={36} /> },
+    { id: 9, name: "PostgreSQL", icon: <BiLogoPostgresql size={36} /> },
+    { id: 10, name: "Flask", icon: <BiLogoFlask size={36} /> },
+    { id: 11, name: "Pandas", icon: <SiPandas size={36} /> },
+    { id: 12, name: "Git", icon: <FaGitAlt size={36} /> },
   ]);
 
   return (
-    <div className="mt-3 lg:mt-16" id="skills">
-      <div className="px-5 lg:px-28">
+    <div className="py-20 lg:py-28 relative" id="skills">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-hot/5 rounded-full blur-[200px] pointer-events-none" />
 
-        <motion.h2
-          className="text-2xl lg:text-4xl text-center"
+      <div className="px-5 lg:px-28 relative z-10">
+        <motion.div
+          className="mb-14 lg:mb-20"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          My <span className="font-extrabold">Skills</span>
-        </motion.h2>
+          <h2 className="text-3xl lg:text-5xl font-bold">
+            My <span className="gradient-text">Skills</span>
+          </h2>
+        </motion.div>
 
-        {/* Skill Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 text-lg font-bold mt-7 lg:mt-16 w-full place-items-center gap-y-6 lg:gap-y-12">
-          {skills.map((skill) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-5">
+          {skills.map((skill, index) => (
             <motion.div
               key={skill.id}
-              className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-5"
-              initial={{ opacity: 0, y: 5 }}
+              className="rounded-2xl p-5 h-28 lg:h-36 flex flex-col items-center justify-center gap-3 group cursor-pointer bg-[#151515] border border-[#2a2a2a] hover:border-pink-hot/40 hover:bg-[#1a1a1a] transition-all duration-300"
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: skill.id * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.04 }}
               viewport={{ once: true }}
+              whileHover={{ y: -6, scale: 1.02 }}
             >
-              {skill.icon}
-              <p>{skill.name}</p>
+              <span className="text-zinc-300 group-hover:text-pink-hot transition-colors duration-300">
+                {skill.icon}
+              </span>
+              <p className="text-xs font-mono text-zinc-400 group-hover:text-white transition-colors duration-300">{skill.name}</p>
             </motion.div>
           ))}
         </div>
-
-      </div>
-
-      {/* Experience Section */}
-      <div className="bg-black w-full my-8 py-8 lg:my-16 lg:py-16">
-        <motion.h2
-          className="text-2xl lg:text-4xl text-center text-white"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          My <span className="font-extrabold">Experience</span>
-        </motion.h2>
-
-        {/* Experience Cards */}
-        <div className="px-5 lg:px-28 my-8 lg:mt-16 space-y-10">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.id}
-              className="bg-black p-5 border border-[#D4D4D8] rounded-md hover:bg-[#27272A] transition-all cursor-pointer"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: index * 0.2,
-              }}
-              viewport={{ once: true }}
-            >
-              <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
-                <div className="flex items-center gap-5">
-                  <img className="w-7" src={exp.logo} alt="" />
-                  <h2 className="font-semibold text-white text-lg lg:text-xl">
-                    {exp.role} at {exp.company}
-                  </h2>
-                </div>
-                <span className="text-[#D4D4D8] font-semibold text-sm mt-4 lg:mt-0 lg:text-base">
-                  {exp.period}
-                </span>
-              </div>
-              <p className="text-[#D4D4D8] mt-6 text-sm/6 lg:text-base font-light">
-                {exp.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
       </div>
     </div>
   );

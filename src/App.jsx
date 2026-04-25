@@ -10,7 +10,7 @@ import CustomCursor from './utils/CursorAnimation'
 
 export default function App() {
   return (
-    <div className='font-sora scroll-smooth overflow-x-hidden'>
+    <div className='font-sora scroll-smooth overflow-x-hidden bg-dark noise relative'>
       <CustomCursor/>
       <Navbar />
       <Home />
@@ -18,7 +18,6 @@ export default function App() {
       <About />
       <Projects />
       <Contact />
-
       <Footer />
     </div>
   )
