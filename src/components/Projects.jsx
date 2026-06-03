@@ -6,6 +6,15 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     id: 1,
+    title: "Network Troubleshooter",
+    description: "Real-time network anomaly detection powered by an LSTM Autoencoder and an autonomous LangChain agent. The system continuously monitors 8 live network metrics, detects anomalies, and dispatches an AI agent to diagnose and attempt automated remediation — all visualised on a Next.js dashboard with a 3D Three.js globe.",
+    image: "/assets/project5.png",
+    github: "https://github.com/NetworksTeam/network-anomaly-detection-",
+    live: "https://networktroubleshooter-4gh8xjm7a-mominazd12-4665s-projects.vercel.app/",
+    tags: ["Next.js", "FastAPI", "LangChain", "LSTM", "TensorFlow", "Docker"]
+  },
+  {
+    id: 2,
     title: "Multi Game Arena",
     description: "A full-stack gaming platform featuring real-time personality analysis through machine learning. Players engage in three distinct game modes while an ML system analyzes their behavior patterns to create personalized AI opponents.",
     image: "/assets/project1.png",
@@ -14,7 +23,7 @@ const projects = [
     tags: ["React", "Python", "ML", "WebSocket"]
   },
   {
-    id: 2,
+    id: 3,
     title: "EduAnalytics Platform",
     description: "EduAnalytics is a comprehensive analytics platform for exploring, visualizing, and understanding learning effectiveness across major online education platforms. It combines advanced statistics, web scraping, and interactive dashboards to deliver actionable insights for both learners and content creators.",
     image: "/assets/project2.png",
@@ -23,7 +32,7 @@ const projects = [
     tags: ["Python", "Data Analysis", "Dashboard"]
   },
   {
-    id: 3,
+    id: 4,
     title: "Intern Performance Predictor",
     description: "A smart prediction system that evaluates and forecasts intern performance. Features an interactive dashboard where managers can visualize trends, track progress, and get real-time performance insights to support better hiring and mentoring decisions.",
     image: "/assets/project3.png",
@@ -32,7 +41,7 @@ const projects = [
     tags: ["ML", "Flask", "XGBoost", "Dashboard"]
   },
   {
-    id: 4,
+    id: 5,
     title: "EventSaga",
     description: "An all-in-one platform for discovering, organizing, and building communities around events. EventSaga connects attendees with experiences they'll love while giving organizers powerful tools to create and manage events seamlessly.",
     image: "/assets/project4.png",

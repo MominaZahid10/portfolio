@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FaPython, FaReact, FaDocker, FaGitAlt } from "react-icons/fa";
 import { BiLogoPostgresql, BiLogoFlask } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiTensorflow, SiTypescript, SiScikitlearn, SiCplusplus, SiPandas } from "react-icons/si";
+import { SiTensorflow, SiTypescript, SiScikitlearn, SiCplusplus, SiPandas, SiLangchain } from "react-icons/si";
 
 export default function Skills() {
   const [skills] = useState([
@@ -19,6 +19,7 @@ export default function Skills() {
     { id: 10, name: "Flask", icon: <BiLogoFlask size={36} /> },
     { id: 11, name: "Pandas", icon: <SiPandas size={36} /> },
     { id: 12, name: "Git", icon: <FaGitAlt size={36} /> },
+    { id: 13, name: "LangChain", icon: <SiLangchain size={36} /> },
   ]);
 
   return (
