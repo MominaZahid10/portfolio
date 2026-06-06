@@ -10,7 +10,7 @@ const projects = [
     description: "Real-time network anomaly detection powered by an LSTM Autoencoder and an autonomous LangChain agent. The system continuously monitors 8 live network metrics, detects anomalies, and dispatches an AI agent to diagnose and attempt automated remediation — all visualised on a Next.js dashboard with a 3D Three.js globe.",
     image: "/assets/project5.png",
     github: "https://github.com/NetworksTeam/network-anomaly-detection-",
-    live: "https://networktroubleshooter-4gh8xjm7a-mominazd12-4665s-projects.vercel.app/",
+    live: "https://project-9370e.vercel.app/",
     tags: ["Next.js", "FastAPI", "LangChain", "LSTM", "TensorFlow", "Docker"]
   },
   {
