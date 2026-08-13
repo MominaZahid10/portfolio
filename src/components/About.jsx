@@ -29,7 +29,7 @@ export default function About() {
 
         <div className="mt-8 space-y-5">
           <p className="text-zinc-400 text-sm/7 lg:text-base/8">
-            Currently in my 3rd year studying <span className="text-white">Artificial Intelligence</span>, with hands-on experience across ML model development, data analysis, and building web applications that actually deliver. I don't like projects that just sit in a Jupyter notebook,the goal has always been to build things that are <span className="text-pink-hot">functional, deployable, and genuinely useful</span>.
+            Currently in my final year studying <span className="text-white">Artificial Intelligence</span>, with hands-on experience across ML model development, data analysis, and building web applications that actually deliver. I don't like projects that just sit in a Jupyter notebook,the goal has always been to build things that are <span className="text-pink-hot">functional, deployable, and genuinely useful</span>.
           </p>
 
           <p className="text-zinc-400 text-sm/7 lg:text-base/8">
