@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaPython, FaReact, FaDocker, FaGitAlt } from "react-icons/fa";
-import { BiLogoPostgresql, BiLogoFlask } from "react-icons/bi";
+import { FaPython, FaReact, FaDocker } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiTensorflow, SiTypescript, SiScikitlearn, SiCplusplus, SiPandas, SiLangchain } from "react-icons/si";
+import { SiTensorflow, SiTypescript, SiScikitlearn, SiLangchain, SiFastapi, SiN8N, SiSupabase } from "react-icons/si";
 
 export default function Skills() {
   const [skills] = useState([
     { id: 1, name: "Python", icon: <FaPython size={36} /> },
     { id: 2, name: "TensorFlow", icon: <SiTensorflow size={36} /> },
     { id: 3, name: "Scikit-learn", icon: <SiScikitlearn size={36} /> },
-    { id: 4, name: "React", icon: <FaReact size={36} /> },
-    { id: 5, name: "Next.js", icon: <RiNextjsFill size={36} /> },
-    { id: 6, name: "TypeScript", icon: <SiTypescript size={36} /> },
-    { id: 7, name: "C++", icon: <SiCplusplus size={36} /> },
-    { id: 8, name: "Docker", icon: <FaDocker size={36} /> },
-    { id: 9, name: "PostgreSQL", icon: <BiLogoPostgresql size={36} /> },
-    { id: 10, name: "Flask", icon: <BiLogoFlask size={36} /> },
-    { id: 11, name: "Pandas", icon: <SiPandas size={36} /> },
-    { id: 12, name: "Git", icon: <FaGitAlt size={36} /> },
-    { id: 13, name: "LangChain", icon: <SiLangchain size={36} /> },
+    { id: 4, name: "LangChain", icon: <SiLangchain size={36} /> },
+    { id: 5, name: "FastAPI", icon: <SiFastapi size={36} /> },
+    { id: 6, name: "n8n", icon: <SiN8N size={36} /> },
+    { id: 7, name: "React", icon: <FaReact size={36} /> },
+    { id: 8, name: "Next.js", icon: <RiNextjsFill size={36} /> },
+    { id: 9, name: "TypeScript", icon: <SiTypescript size={36} /> },
+    { id: 10, name: "PostgreSQL", icon: <BiLogoPostgresql size={36} /> },
+    { id: 11, name: "Supabase", icon: <SiSupabase size={36} /> },
+    { id: 12, name: "Docker", icon: <FaDocker size={36} /> },
   ]);
 
   return (
